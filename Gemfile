@@ -16,6 +16,9 @@ end
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.14.1'
+  gem 'guard-rspec', '4.2.3'
+  gem 'terminal-notifier-guard', '1.5.3'
+  gem 'guard-livereload', '2.1.1'
 end
 
 group :test do
