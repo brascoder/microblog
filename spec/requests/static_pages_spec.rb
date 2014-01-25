@@ -3,14 +3,14 @@ require 'spec_helper'
 describe "StaticPages" do
 
   context 'Home page' do
-    it "should have the content 'Microblog'" do
+    it "should have the content 'MicroBlog'" do
       visit '/static_pages/home'
-      expect(page).to have_content('Microblog')
+      expect(page).to have_content('MicroBlog')
     end
 
-    it "should have the title 'Microblog'" do
+    it "should have the title 'MicroBlog'" do
       visit '/static_pages/home'
-      expect(page).to have_title('Microblog')
+      expect(page).to have_title('MicroBlog')
     end
   end
 
