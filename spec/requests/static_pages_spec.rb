@@ -1,53 +1,34 @@
 require 'spec_helper'
 
 describe "StaticPages" do
+  subject { page }
 
   context 'Home page' do
-    it "should have the content 'MicroBlog'" do
-      visit '/static_pages/home'
-      expect(page).to have_content('MicroBlog')
-    end
+    before { visit root_path }
 
-    it "should have the title 'MicroBlog'" do
-      visit '/static_pages/home'
-      expect(page).to have_title('MicroBlog')
-    end
+    it { should have_content('MicroBlog') }
+    it { should have_title('MicroBlog') }
   end
 
   context 'Help page' do
-    it "should have the content 'Help'" do
-      visit '/static_pages/help'
-      expect(page).to have_content('Help')
-    end
+    before { visit help_path }
 
-    it "should have title 'Help'" do
-      visit '/static_pages/help'
-      expect(page).to have_title('Help')
-    end
+    it { should have_content('Help') }
+    it { should have_title('Help') }
   end
 
   context 'About page' do
-    it "should have the content 'About'" do
-      visit '/static_pages/about'
-      expect(page).to have_content('About')
-    end
+    before { visit about_path }
 
-    it "should have the title 'about'" do
-      visit '/static_pages/about'
-      expect(page).to have_title('About')
-    end
+    it { should have_content('About') }
+    it { should have_title('About') }
   end
 
   context 'Contact page' do
-    it "should have the content 'Contact'" do
-      visit '/static_pages/contact'
-      expect(page).to have_content('Contact')
-    end
+    before { visit contact_path }
 
-    it "should have the title 'Contact'" do
-      visit '/static_pages/contact'
-      expect(page).to have_title('Contact')
-    end
+    it { should have_content('Contact') }
+    it { should have_title('Contact') }
   end
 
 end
