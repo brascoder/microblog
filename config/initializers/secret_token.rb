@@ -11,6 +11,8 @@
 # if you're sharing your code publicly.
 # Microblog::Application.config.secret_key_base = '0ab05a7ce30c61868642783979b31272ab0967302300c92f302e39590417e66332335258256ec76d0cc7c54aaa952e4f6b3969632b346ab58896aace22e274f2'
 
+require 'securerandom'
+
 def secure_token
   token_file = Rails.root.join('.secret')
   if File.exist?(token_file)
