@@ -1,1 +1,1 @@
-This is a microblog demo application.
+This is a demo Ruby on Rails app based on the tutorial at ruby.railstutorial.org.
